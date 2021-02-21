@@ -1,0 +1,6 @@
+framework module Pods_Reduxulous {
+  umbrella header "Pods-Reduxulous-umbrella.h"
+
+  export *
+  module * { export * }
+}

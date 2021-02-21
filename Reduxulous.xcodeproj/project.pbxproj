@@ -3,13 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146E213E25E2D5C600657E83 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E213D25E2D5C600657E83 /* Reducer.swift */; };
+		14D1CDC025E1A667005A914A /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1CDBF25E1A667005A914A /* Mock.swift */; };
+		14D1CDCA25E1B350005A914A /* ComposedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1CDC925E1B350005A914A /* ComposedStore.swift */; };
 		14E942B425E19FC70095C06A /* Reduxulous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E942AA25E19FC70095C06A /* Reduxulous.framework */; };
 		14E942B925E19FC70095C06A /* ReduxulousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E942B825E19FC70095C06A /* ReduxulousTests.swift */; };
 		14E942BB25E19FC70095C06A /* Reduxulous.h in Headers */ = {isa = PBXBuildFile; fileRef = 14E942AD25E19FC70095C06A /* Reduxulous.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14E942CA25E19FE70095C06A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E942C625E19FE70095C06A /* Action.swift */; };
+		14E942CC25E19FE70095C06A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E942C825E19FE70095C06A /* State.swift */; };
+		14E942CD25E19FE70095C06A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E942C925E19FE70095C06A /* Store.swift */; };
+		5ABFB8461FE5BE14C2F37ABF /* Pods_Reduxulous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910B573F301A4F157D694EBE /* Pods_Reduxulous.framework */; };
+		78D23C2A93D25D242BDD3BB9 /* Pods_Reduxulous_ReduxulousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7325A76D5127BA95BC0E06 /* Pods_Reduxulous_ReduxulousTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +31,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		146E213D25E2D5C600657E83 /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		14D1CDBF25E1A667005A914A /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		14D1CDC925E1B350005A914A /* ComposedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedStore.swift; sourceTree = "<group>"; };
 		14E942AA25E19FC70095C06A /* Reduxulous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reduxulous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E942AD25E19FC70095C06A /* Reduxulous.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reduxulous.h; sourceTree = "<group>"; };
 		14E942AE25E19FC70095C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14E942B325E19FC70095C06A /* ReduxulousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxulousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E942B825E19FC70095C06A /* ReduxulousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxulousTests.swift; sourceTree = "<group>"; };
 		14E942BA25E19FC70095C06A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E942C625E19FE70095C06A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		14E942C825E19FE70095C06A /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		14E942C925E19FE70095C06A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		225E93104E1C822BBCA7B3BE /* Pods-Reduxulous-ReduxulousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reduxulous-ReduxulousTests.release.xcconfig"; path = "Target Support Files/Pods-Reduxulous-ReduxulousTests/Pods-Reduxulous-ReduxulousTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B416A0FD720DE165D0429ED /* Pods-Reduxulous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reduxulous.debug.xcconfig"; path = "Target Support Files/Pods-Reduxulous/Pods-Reduxulous.debug.xcconfig"; sourceTree = "<group>"; };
+		6A9844A0FA9FE4E420246FE3 /* Pods-Reduxulous-ReduxulousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reduxulous-ReduxulousTests.debug.xcconfig"; path = "Target Support Files/Pods-Reduxulous-ReduxulousTests/Pods-Reduxulous-ReduxulousTests.debug.xcconfig"; sourceTree = "<group>"; };
+		825AB13C0CC2B5223B2B7F5E /* Pods-Reduxulous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reduxulous.release.xcconfig"; path = "Target Support Files/Pods-Reduxulous/Pods-Reduxulous.release.xcconfig"; sourceTree = "<group>"; };
+		8C7325A76D5127BA95BC0E06 /* Pods_Reduxulous_ReduxulousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reduxulous_ReduxulousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		910B573F301A4F157D694EBE /* Pods_Reduxulous.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reduxulous.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABFB8461FE5BE14C2F37ABF /* Pods_Reduxulous.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E942B425E19FC70095C06A /* Reduxulous.framework in Frameworks */,
+				78D23C2A93D25D242BDD3BB9 /* Pods_Reduxulous_ReduxulousTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +78,8 @@
 				14E942AC25E19FC70095C06A /* Reduxulous */,
 				14E942B725E19FC70095C06A /* ReduxulousTests */,
 				14E942AB25E19FC70095C06A /* Products */,
+				BE796E5156E9A6FF56837119 /* Pods */,
+				CF7FB060B48056D4EF51D27E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +95,13 @@
 		14E942AC25E19FC70095C06A /* Reduxulous */ = {
 			isa = PBXGroup;
 			children = (
+				146E213D25E2D5C600657E83 /* Reducer.swift */,
+				14E942C625E19FE70095C06A /* Action.swift */,
+				14E942C825E19FE70095C06A /* State.swift */,
+				14E942C925E19FE70095C06A /* Store.swift */,
 				14E942AD25E19FC70095C06A /* Reduxulous.h */,
 				14E942AE25E19FC70095C06A /* Info.plist */,
+				14D1CDC925E1B350005A914A /* ComposedStore.swift */,
 			);
 			path = Reduxulous;
 			sourceTree = "<group>";
@@ -82,8 +111,29 @@
 			children = (
 				14E942B825E19FC70095C06A /* ReduxulousTests.swift */,
 				14E942BA25E19FC70095C06A /* Info.plist */,
+				14D1CDBF25E1A667005A914A /* Mock.swift */,
 			);
 			path = ReduxulousTests;
+			sourceTree = "<group>";
+		};
+		BE796E5156E9A6FF56837119 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B416A0FD720DE165D0429ED /* Pods-Reduxulous.debug.xcconfig */,
+				825AB13C0CC2B5223B2B7F5E /* Pods-Reduxulous.release.xcconfig */,
+				6A9844A0FA9FE4E420246FE3 /* Pods-Reduxulous-ReduxulousTests.debug.xcconfig */,
+				225E93104E1C822BBCA7B3BE /* Pods-Reduxulous-ReduxulousTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF7FB060B48056D4EF51D27E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				910B573F301A4F157D694EBE /* Pods_Reduxulous.framework */,
+				8C7325A76D5127BA95BC0E06 /* Pods_Reduxulous_ReduxulousTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14E942BE25E19FC70095C06A /* Build configuration list for PBXNativeTarget "Reduxulous" */;
 			buildPhases = (
+				92406F7EC06A669EF549BB4B /* [CP] Check Pods Manifest.lock */,
 				14E942A525E19FC70095C06A /* Headers */,
 				14E942A625E19FC70095C06A /* Sources */,
 				14E942A725E19FC70095C06A /* Frameworks */,
@@ -122,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14E942C125E19FC70095C06A /* Build configuration list for PBXNativeTarget "ReduxulousTests" */;
 			buildPhases = (
+				42BEAB5D95AC13DD326432DB /* [CP] Check Pods Manifest.lock */,
 				14E942AF25E19FC70095C06A /* Sources */,
 				14E942B025E19FC70095C06A /* Frameworks */,
 				14E942B125E19FC70095C06A /* Resources */,
+				9C67A1298F42CF0E318D1B43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +200,7 @@
 				TargetAttributes = {
 					14E942A925E19FC70095C06A = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					14E942B225E19FC70095C06A = {
 						CreatedOnToolsVersion = 12.4;
@@ -189,11 +243,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42BEAB5D95AC13DD326432DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reduxulous-ReduxulousTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92406F7EC06A669EF549BB4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reduxulous-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C67A1298F42CF0E318D1B43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reduxulous-ReduxulousTests/Pods-Reduxulous-ReduxulousTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reduxulous-ReduxulousTests/Pods-Reduxulous-ReduxulousTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reduxulous-ReduxulousTests/Pods-Reduxulous-ReduxulousTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		14E942A625E19FC70095C06A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E942CA25E19FE70095C06A /* Action.swift in Sources */,
+				14E942CC25E19FE70095C06A /* State.swift in Sources */,
+				14E942CD25E19FE70095C06A /* Store.swift in Sources */,
+				146E213E25E2D5C600657E83 /* Reducer.swift in Sources */,
+				14D1CDCA25E1B350005A914A /* ComposedStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E942B925E19FC70095C06A /* ReduxulousTests.swift in Sources */,
+				14D1CDC025E1A667005A914A /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,7 +464,9 @@
 		};
 		14E942BF25E19FC70095C06A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B416A0FD720DE165D0429ED /* Pods-Reduxulous.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = se.boogh.tododo.Reduxulous;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +490,9 @@
 		};
 		14E942C025E19FC70095C06A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825AB13C0CC2B5223B2B7F5E /* Pods-Reduxulous.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,7 +515,9 @@
 		};
 		14E942C225E19FC70095C06A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A9844A0FA9FE4E420246FE3 /* Pods-Reduxulous-ReduxulousTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ReduxulousTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,7 +534,9 @@
 		};
 		14E942C325E19FC70095C06A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225E93104E1C822BBCA7B3BE /* Pods-Reduxulous-ReduxulousTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ReduxulousTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
