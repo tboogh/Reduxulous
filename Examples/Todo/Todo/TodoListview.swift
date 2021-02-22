@@ -9,15 +9,34 @@ import SwiftUI
 import Reduxulous
 import Combine
 
+extension String{
+    func asBinding(set: @escaping (String) -> Void) -> Binding<String>{
+        return Binding(get: {self}, set: { (newV) in
+            set(newV)
+        })
+    }
+}
+
 struct TodoListview: View {
 //    @EnvironmentObject var store : TodoStore
     @EnvironmentObject var store: ReplayStoreDecorator<TodoAction, TodoState>
-    @SwiftUI.State private var celsius: Float = 0
     
     var body: some View {
         NavigationView{
             VStack{
                 List{
+                    if (store.state.displayInput){
+                        HStack{
+                            TextField("Input", text: store.state.addTodoText.asBinding(set: { (newValue) in
+                                store.dispatch(TodoAction.setTodoInput(input: newValue))
+                            }))
+                            Button(action: {store.dispatch(TodoAction.add(title: store.state.addTodoText))}){
+                                Image(systemName: "plus")
+                                    .resizable()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                            }
+                        }
+                    }
                     ForEach(store.state.todos, id:\.id){ todo in
                         Text(todo.name)
                     }
@@ -37,7 +56,7 @@ struct TodoListview: View {
                 }
             }
             .navigationBarItems(leading: Button("Add", action: {
-                store.dispatch(TodoAction.add(title: "todo_\(store.state.todos.count)"))
+                store.dispatch(TodoAction.displayInput)
             }), trailing: EditButton())
             .navigationBarTitle("Tododo!", displayMode: .large)
             
@@ -51,7 +70,7 @@ struct TodoListview: View {
 
 struct TododoReduxListview_Previews: PreviewProvider {
     static var previews: some View {
-        let store = ReplayStoreDecorator(store: TodoStore(initialState: TodoState(todos: [Todo(id: UUID(), name: "Test_1", sortOrder: 0)])))
+        let store = ReplayStoreDecorator(store: TodoStore(initialState: TodoState(todos: [Todo(id: UUID(), name: "Test_1", sortOrder: 0)], displayInput: true, addTodoText: "Test")))
         // wrap store for debug
         TodoListview()
             .environmentObject(store)

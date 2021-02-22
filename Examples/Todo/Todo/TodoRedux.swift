@@ -3,9 +3,13 @@ import Reduxulous
 
 public struct TodoState: State{
     var todos: [Todo]
+    var displayInput: Bool
+    var addTodoText: String
 }
 
 public enum TodoAction: Action{
+    case displayInput
+    case setTodoInput(input: String)
     case add(title: String)
     case remove(indexSet: IndexSet)
     case move(indices: IndexSet, newIndex: Int)
@@ -22,8 +26,10 @@ public class TodoReducer : Reducer<TodoState, TodoAction>{
         var newState = state
         switch action {
         case .add(let title):
-            let todo = Todo(id: UUID(), name: title, sortOrder: newState.todos.count)
-            newState.todos.append(todo)
+            let todo = Todo(id: UUID(), name: title, sortOrder: 0)
+            newState.todos.insert(todo, at: 0)
+            newState.displayInput = false
+            newState.addTodoText = ""
             updateSortOrder(todos: &newState.todos)
             break
         case .remove(let indexSet):
@@ -35,6 +41,12 @@ public class TodoReducer : Reducer<TodoState, TodoAction>{
         case .move(let indices, let newIndex):
             newState.todos.move(fromOffsets: indices, toOffset: newIndex)
             updateSortOrder(todos: &newState.todos)
+            break
+        case .displayInput:
+            newState.displayInput = !newState.displayInput
+            break
+        case .setTodoInput(let input):
+            newState.addTodoText = input
             break
         }
         return newState

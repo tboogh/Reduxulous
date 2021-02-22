@@ -23,54 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "37AC318D-A1E9-479C-A221-D45E1B5F1C51"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Examples/Todo/Todo/TodoListview.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "37AC318D-A1E9-479C-A221-D45E1B5F1C51 - 5f8cd4927cdc00fe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Slider&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.List&lt;Swift.Never, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.DynamicViewContent.onDelete(perform: Swift.Optional&lt;(Foundation.IndexSet) -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Slider&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.Text)&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(_: SwiftUI.LocalizedStringKey, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in Todo.TodoListview.body.getter : some"
-                  moduleName = "Todo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tobiasboogh/Projects/Private/Reduxulous/Examples/Todo/Todo/TodoListview.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "1257">
-               </Location>
-               <Location
-                  uuid = "37AC318D-A1E9-479C-A221-D45E1B5F1C51 - 73031688e76d1c4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Float) -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Slider&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.List&lt;Swift.Never, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.DynamicViewContent.onDelete(perform: Swift.Optional&lt;(Foundation.IndexSet) -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Slider&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;, SwiftUI.Text)&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(_: SwiftUI.LocalizedStringKey, displayMode: SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in Todo.TodoListview.body.getter : some"
-                  moduleName = "Todo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tobiasboogh/Projects/Private/Reduxulous/Examples/Todo/Todo/TodoListview.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "510B5860-2A1A-41EF-AD31-14718FE0DD63"
             shouldBeEnabled = "No"
             ignoreCount = "0"
