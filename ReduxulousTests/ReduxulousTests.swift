@@ -28,7 +28,7 @@ class ReduxulousTests: QuickSpec {
         describe("ReplayStore"){
             it("StateCount should be 4"){
                 let mockStore = MockStore(initialState: MockState())
-                let replayStore = ReplayStoreDecorator(store: mockStore)
+                let replayStore = ReplayStore(store: mockStore)
                 replayStore.dispatch(MockAction.increment)
                 replayStore.dispatch(MockAction.increment)
                 replayStore.dispatch(MockAction.decrement)
@@ -37,7 +37,7 @@ class ReduxulousTests: QuickSpec {
             
             it("selectState 2 should have test value of 2"){
                 let mockStore = MockStore(initialState: MockState())
-                let replayStore = ReplayStoreDecorator(store: mockStore)
+                let replayStore = ReplayStore(store: mockStore)
                 replayStore.dispatch(MockAction.increment) // state 1
                 replayStore.dispatch(MockAction.increment) // state 2
                 replayStore.dispatch(MockAction.decrement) // state 3
@@ -48,7 +48,7 @@ class ReduxulousTests: QuickSpec {
             
             it("after selectState dispatch should not add new state"){
                 let mockStore = MockStore(initialState: MockState())
-                let replayStore = ReplayStoreDecorator(store: mockStore)
+                let replayStore = ReplayStore(store: mockStore)
                 replayStore.dispatch(MockAction.increment) // state 1
                 replayStore.dispatch(MockAction.increment) // state 2
                 
@@ -61,7 +61,7 @@ class ReduxulousTests: QuickSpec {
             
             it("after selectState to last state dispatch should add new state"){
                 let mockStore = MockStore(initialState: MockState())
-                let replayStore = ReplayStoreDecorator(store: mockStore)
+                let replayStore = ReplayStore(store: mockStore)
                 replayStore.dispatch(MockAction.increment) // state 1
                 replayStore.dispatch(MockAction.increment) // state 2
                 

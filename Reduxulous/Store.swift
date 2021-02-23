@@ -5,7 +5,7 @@ public protocol Store{
     func dispatch(_ action: Action) -> Void
 }
 
-open class ReplayStoreDecorator<StoreAction: Action, StoreState: State>: StoreDecorator<StoreAction, StoreState>{
+open class ReplayStore<StoreAction: Action, StoreState: State>: StoreDecorator<StoreAction, StoreState>{
     var isReplaying = false
     var states: [StoreState] = []
     

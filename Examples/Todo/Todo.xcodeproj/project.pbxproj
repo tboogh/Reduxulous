@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1493484925E43C240075E4BD /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493484825E43C240075E4BD /* TodoDetailView.swift */; };
 		14D1CD8825E1A2AF005A914A /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D1CD8725E1A2AF005A914A /* TodoApp.swift */; };
 		14D1CD8C25E1A2B0005A914A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D1CD8B25E1A2B0005A914A /* Assets.xcassets */; };
 		14D1CD8F25E1A2B0005A914A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D1CD8E25E1A2B0005A914A /* Preview Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1493484825E43C240075E4BD /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		14D1CD8425E1A2AF005A914A /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D1CD8725E1A2AF005A914A /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		14D1CD8B25E1A2B0005A914A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				14D1CD8B25E1A2B0005A914A /* Assets.xcassets */,
 				14D1CD9025E1A2B0005A914A /* Info.plist */,
 				14D1CD8D25E1A2B0005A914A /* Preview Content */,
+				1493484825E43C240075E4BD /* TodoDetailView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1493484925E43C240075E4BD /* TodoDetailView.swift in Sources */,
 				14D1CDAB25E1A3B0005A914A /* TodoRedux.swift in Sources */,
 				14D1CDAC25E1A3B0005A914A /* TodoListview.swift in Sources */,
 				14D1CDAA25E1A3B0005A914A /* Todo.swift in Sources */,

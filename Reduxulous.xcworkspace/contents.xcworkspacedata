@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Examples/Movielicuos/Movielicuos.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Examples/Todo/Todo.xcodeproj">
    </FileRef>
    <FileRef

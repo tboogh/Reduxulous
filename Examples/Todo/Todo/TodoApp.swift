@@ -9,7 +9,7 @@ import SwiftUI
 import Reduxulous
 @main
 struct TodoApp: App {
-    let store = ReplayStoreDecorator(store: TodoStore(initialState: TodoState(todos: [], displayInput: false, addTodoText: "")))
+    let store = ReplayStore(store: TodoStore(initialState: TodoState(todos: [], displayInput: false, addTodoText: "", displayDetail: false)))
     var body: some Scene {
         WindowGroup {
             TodoListview()

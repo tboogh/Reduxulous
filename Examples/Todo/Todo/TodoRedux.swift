@@ -5,6 +5,7 @@ public struct TodoState: State{
     var todos: [Todo]
     var displayInput: Bool
     var addTodoText: String
+    var displayDetail: Bool
 }
 
 public enum TodoAction: Action{
@@ -13,6 +14,8 @@ public enum TodoAction: Action{
     case add(title: String)
     case remove(indexSet: IndexSet)
     case move(indices: IndexSet, newIndex: Int)
+    case select
+    case hide
 }
 
 public class TodoStore : BaseStore<TodoAction, TodoState>{
@@ -48,7 +51,14 @@ public class TodoReducer : Reducer<TodoState, TodoAction>{
         case .setTodoInput(let input):
             newState.addTodoText = input
             break
+        case .select:
+            newState.displayDetail = true
+            break
+        case .hide:
+            newState.displayDetail = false
+            break
         }
+        
         return newState
     }
     

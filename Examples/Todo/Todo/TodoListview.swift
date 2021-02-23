@@ -17,9 +17,21 @@ extension String{
     }
 }
 
+extension Bool{
+    func asBinding(set: @escaping (Bool) -> Void) -> Binding<Bool>{
+        return Binding(get: {self}, set: { (newV) in
+            set(newV)
+        })
+    }
+    
+    func asBinding() -> Binding<Bool>{
+        return Binding(get: {self}, set: { _ in })
+    }
+}
+
 struct TodoListview: View {
 //    @EnvironmentObject var store : TodoStore
-    @EnvironmentObject var store: ReplayStoreDecorator<TodoAction, TodoState>
+    @EnvironmentObject var store: ReplayStore<TodoAction, TodoState>
     
     var body: some View {
         NavigationView{
@@ -46,6 +58,9 @@ struct TodoListview: View {
                     .onDelete(perform: { indexSet in
                         store.dispatch(TodoAction.remove(indexSet: indexSet))
                     })
+                    .onTapGesture(perform: {
+                        store.dispatch(TodoAction.select)
+                    })
                 }
                 HStack{
                     Text("0")
@@ -59,7 +74,7 @@ struct TodoListview: View {
                 store.dispatch(TodoAction.displayInput)
             }), trailing: EditButton())
             .navigationBarTitle("Tododo!", displayMode: .large)
-            
+            NavigationLink("TodoDetailView", destination: TodoDetailView(), isActive: store.state.displayDetail.asBinding())
         }
     }
     
@@ -70,7 +85,7 @@ struct TodoListview: View {
 
 struct TododoReduxListview_Previews: PreviewProvider {
     static var previews: some View {
-        let store = ReplayStoreDecorator(store: TodoStore(initialState: TodoState(todos: [Todo(id: UUID(), name: "Test_1", sortOrder: 0)], displayInput: true, addTodoText: "Test")))
+        let store = ReplayStore(store: TodoStore(initialState: TodoState(todos: [Todo(id: UUID(), name: "Test_1", sortOrder: 0)], displayInput: true, addTodoText: "Test", displayDetail: false)))
         // wrap store for debug
         TodoListview()
             .environmentObject(store)
