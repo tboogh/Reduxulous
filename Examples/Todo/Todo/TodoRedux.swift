@@ -25,10 +25,6 @@ public class TodoStore : BaseStore<TodoAction, TodoState>{
 }
 
 public class TodoReducer : Reducer<TodoState, TodoAction>{
-    fileprivate func extractedFunc(_ newState: inout TodoState) {
-        updateSortOrder(todos: &newState.todos)
-    }
-    
     public override func reduce(state: TodoState, action: TodoAction) -> TodoState {
         var newState = state
         switch action {
@@ -40,9 +36,15 @@ public class TodoReducer : Reducer<TodoState, TodoAction>{
             updateSortOrder(todos: &newState.todos)
             break
         case .remove(let indexSet):
-            return remove(state: state, indexSet: indexSet)
+            for index in indexSet {
+                newState.todos.remove(at: index)
+            }
+            updateSortOrder(todos: &newState.todos)
+            break
         case .move(let indices, let newIndex):
-            return move(state: state, indices: indices, index: newIndex)
+            newState.todos.move(fromOffsets: indices, toOffset: newIndex)
+            updateSortOrder(todos: &newState.todos)
+            break
         case .displayInput:
             newState.displayInput = !newState.displayInput
             break
@@ -57,25 +59,6 @@ public class TodoReducer : Reducer<TodoState, TodoAction>{
             break
         }
         
-        return newState
-    }
-}
-
-private extension TodoReducer{
-    
-    func move(state: TodoState, indices:IndexSet, index: Int) -> TodoState {
-        var newState = state
-        newState.todos.move(fromOffsets: indices, toOffset: index)
-        updateSortOrder(todos: &newState.todos)
-        return newState
-    }
-    
-    func remove(state: TodoState, indexSet: IndexSet) -> TodoState {
-        var newState = state
-        for index in indexSet {
-            newState.todos.remove(at: index)
-        }
-        updateSortOrder(todos: &newState.todos)
         return newState
     }
     
